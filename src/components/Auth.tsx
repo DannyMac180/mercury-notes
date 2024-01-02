@@ -20,7 +20,7 @@ export default function Auth() {
               </Button>
             </div>
             <div>
-              <Button className="w-full p-2">Sign Up</Button>
+              <Button className="w-full p-2" variant="black">Sign Up</Button>
             </div>
           </div>
         </div>
