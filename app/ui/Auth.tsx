@@ -2,7 +2,7 @@
  * v0 by Vercel.
  * @see https://v0.dev/t/xtT4e1xIKDe
  */
-import { Button } from "@/components/ui/button"
+import { Button } from "./button"
 
 export default function Auth() {
   return (
