@@ -1,6 +1,6 @@
-import Auth from './ui/Auth'
+import Auth from './ui/auth-form';
 
-export default function Home() {
+export default function Page() {
   return (
     <>
       <Auth />
