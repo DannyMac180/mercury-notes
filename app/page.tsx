@@ -15,7 +15,7 @@ export default function Page() {
           </div>
         </Link>
         <nav className="flex items-center gap-4">
-          <Link className="text-sm font-medium hover:underline" href="#">
+          <Link className="text-sm font-medium hover:underline" href="/login">
             Login
           </Link>
           <Link className="text-sm font-medium hover:underline" href="#">
