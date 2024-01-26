@@ -16,16 +16,20 @@ export default function Login() {
           <p className="mt-2 text-center text-sm text-gray-600">Enter your credentials below</p>
         </div>
         <div>
-          <Button className="w-full p-2" variant="outline" onClick={() => signIn('email')}>
+          <Button className="w-full p-2 flex justify-center items-center" variant="outline" onClick={() => signIn('email')}>
+            <img src="https://example.com/email-icon.png" alt="Email" className="mr-2" />
             Log In with Email
           </Button>
-          <Button className="w-full p-2 mt-2" variant="outline" onClick={() => signIn('google')}>
+          <Button className="w-full p-2 mt-2 flex justify-center items-center" variant="outline" onClick={() => signIn('google')}>
+            <img src="https://example.com/google-icon.png" alt="Google" className="mr-2" />
             Log In with Google
           </Button>
-          <Button className="w-full p-2 mt-2" variant="outline" onClick={() => signIn('facebook')}>
+          <Button className="w-full p-2 mt-2 flex justify-center items-center" variant="outline" onClick={() => signIn('facebook')}>
+            <img src="https://example.com/facebook-icon.png" alt="Facebook" className="mr-2" />
             Log In with Facebook
           </Button>
-          <Button className="w-full p-2 mt-2" variant="outline" onClick={() => signIn('github')}>
+          <Button className="w-full p-2 mt-2 flex justify-center items-center" variant="outline" onClick={() => signIn('github')}>
+            <img src="https://example.com/github-icon.png" alt="GitHub" className="mr-2" />
             Log In with GitHub
           </Button>
         </div>
