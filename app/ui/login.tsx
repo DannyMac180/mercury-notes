@@ -17,19 +17,19 @@ export default function Login() {
         </div>
         <div>
           <Button className="w-full p-2 flex justify-center items-center" variant="outline" onClick={() => signIn('email')}>
-            <img src="https://example.com/email-icon.png" alt="Email" className="mr-2" />
+            <img src="/email-icon.png" alt="Email" className="h-6 w-6 mr-2" />
             Log In with Email
           </Button>
           <Button className="w-full p-2 mt-2 flex justify-center items-center" variant="outline" onClick={() => signIn('google')}>
-            <img src="https://example.com/google-icon.png" alt="Google" className="mr-2" />
+            <img src="/Google.png" alt="Google" className="h-8 w-8 mr-2" />
             Log In with Google
           </Button>
           <Button className="w-full p-2 mt-2 flex justify-center items-center" variant="outline" onClick={() => signIn('facebook')}>
-            <img src="https://example.com/facebook-icon.png" alt="Facebook" className="mr-2" />
+            <img src="/Facebook.png" alt="Facebook" className="h-6 w-6 mr-2" />
             Log In with Facebook
           </Button>
           <Button className="w-full p-2 mt-2 flex justify-center items-center" variant="outline" onClick={() => signIn('github')}>
-            <img src="https://example.com/github-icon.png" alt="GitHub" className="mr-2" />
+            <img src="/github.svg" alt="GitHub" className="h-6 w-6 mr-2" />
             Log In with GitHub
           </Button>
         </div>
