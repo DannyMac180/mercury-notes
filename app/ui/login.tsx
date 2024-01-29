@@ -16,10 +16,25 @@ export default function Login() {
           <p className="mt-2 text-center text-sm text-gray-600">Enter your credentials below</p>
         </div>
         <div>
-          <Button className="w-full p-2 flex justify-center items-center" variant="outline" onClick={() => signIn('email')}>
-            <img src="/email-icon.png" alt="Email" className="h-6 w-6 mr-2" />
-            Log In with Email
+          <input
+            type="email"
+            placeholder="Email address"
+            className="w-full p-2 border border-gray-300 rounded mt-2"
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            className="w-full p-2 border border-gray-300 rounded mt-2"
+            required
+          />
+          <Button
+            className="w-full p-2 mt-2 flex justify-center items-center border-2 border-black"
+            variant="default"
+            onClick={() => signIn('credentials')}>
+            <strong>Log In with Email</strong>
           </Button>
+          <hr className="my-4 border-t border-gray-300" />
           <Button className="w-full p-2 mt-2 flex justify-center items-center" variant="outline" onClick={() => signIn('google')}>
             <img src="/google.svg" alt="Google" className="h-6 w-6 mr-2" />
             Log In with Google
