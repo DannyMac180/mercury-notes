@@ -21,11 +21,11 @@ export default function Login() {
             Log In with Email
           </Button>
           <Button className="w-full p-2 mt-2 flex justify-center items-center" variant="outline" onClick={() => signIn('google')}>
-            <img src="/Google.png" alt="Google" className="h-8 w-8 mr-2" />
+            <img src="/google.svg" alt="Google" className="h-6 w-6 mr-2" />
             Log In with Google
           </Button>
           <Button className="w-full p-2 mt-2 flex justify-center items-center" variant="outline" onClick={() => signIn('facebook')}>
-            <img src="/Facebook.png" alt="Facebook" className="h-6 w-6 mr-2" />
+            <img src="/facebook.svg" alt="Facebook" className="h-6 w-6 mr-2" />
             Log In with Facebook
           </Button>
           <Button className="w-full p-2 mt-2 flex justify-center items-center" variant="outline" onClick={() => signIn('github')}>
