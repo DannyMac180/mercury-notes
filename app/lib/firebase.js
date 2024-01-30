@@ -22,6 +22,5 @@ const emailAuthProvider = new firebase.auth.EmailAuthProvider();
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 const facebookAuthProvider = new firebase.auth.FacebookAuthProvider();
 const githubAuthProvider = new firebase.auth.GithubAuthProvider();
-const twitterAuthProvider = new firebase.auth.TwitterAuthProvider();
 
-export { auth, emailAuthProvider, googleAuthProvider, facebookAuthProvider, githubAuthProvider, twitterAuthProvider }
+export { auth, emailAuthProvider, googleAuthProvider, facebookAuthProvider, githubAuthProvider }
