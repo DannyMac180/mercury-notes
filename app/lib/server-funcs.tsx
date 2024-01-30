@@ -1,4 +1,4 @@
-import { auth, googleAuthProvider, facebookAuthProvider, githubAuthProvider, twitterAuthProvider } from '../lib/firebase';
+import { auth, googleAuthProvider, facebookAuthProvider, githubAuthProvider } from '../lib/firebase';
 
 export const signInWithGoogle = async () => {
   try {
