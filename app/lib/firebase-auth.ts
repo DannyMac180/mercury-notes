@@ -1,44 +1,52 @@
-import { getAuth, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, FacebookAuthProvider, GithubAuthProvider } from 'firebase/auth';
+import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
+import { auth, googleProvider, facebookProvider, githubProvider } from './firebase';
 
-export const signInWithEmail = async (email: string, password: string) => {
-  const auth = getAuth();
+const signInWithEmail = async (email: string, password: string) => {
   try {
-    const result = await signInWithEmailAndPassword(auth, email, password);
-    return result;
+    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    // User signed in
+    return userCredential.user;
   } catch (error) {
-    console.error("Error signing in with email and password", error);
+    // Handle Errors here.
+    console.error('Error signing in with email and password', error);
+    throw error;
   }
 };
 
-export const signInWithGoogle = async () => {
-  const auth = getAuth();
-  const provider = new GoogleAuthProvider();
+const signInWithGoogle = async () => {
   try {
-    const result = await signInWithPopup(auth, provider);
-    return result;
+    const userCredential = await signInWithPopup(auth, googleProvider);
+    // User signed in
+    return userCredential.user;
   } catch (error) {
-    console.error("Error signing in with Google", error);
+    // Handle Errors here.
+    console.error('Error signing in with Google', error);
+    throw error;
   }
 };
 
-export const signInWithFacebook = async () => {
-  const auth = getAuth();
-  const provider = new FacebookAuthProvider();
+const signInWithFacebook = async () => {
   try {
-    const result = await signInWithPopup(auth, provider);
-    return result;
+    const userCredential = await signInWithPopup(auth, facebookProvider);
+    // User signed in
+    return userCredential.user;
   } catch (error) {
-    console.error("Error signing in with Facebook", error);
+    // Handle Errors here.
+    console.error('Error signing in with Facebook', error);
+    throw error;
   }
 };
 
-export const signInWithGithub = async () => {
-  const auth = getAuth();
-  const provider = new GithubAuthProvider();
+const signInWithGithub = async () => {
   try {
-    const result = await signInWithPopup(auth, provider);
-    return result;
+    const userCredential = await signInWithPopup(auth, githubProvider);
+    // User signed in
+    return userCredential.user;
   } catch (error) {
-    console.error("Error signing in with GitHub", error);
+    // Handle Errors here.
+    console.error('Error signing in with GitHub', error);
+    throw error;
   }
 };
+
+export { signInWithEmail, signInWithGoogle, signInWithFacebook, signInWithGithub };
