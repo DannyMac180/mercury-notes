@@ -1,4 +1,4 @@
-import { initializeApp, getApps, getApp } from 'firebase/app';
+import { initializeApp } from 'firebase/app';
 import { getAuth, EmailAuthProvider, GoogleAuthProvider, FacebookAuthProvider, GithubAuthProvider } from 'firebase/auth';
 
 const firebaseConfig = {
@@ -11,14 +11,16 @@ const firebaseConfig = {
     measurementId: "G-9SRW9WFN5T"
 };
 
-const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 
-// Auth and provider exports
+// Initialize Firebase Authentication and get a reference to the service
 const auth = getAuth(app);
-const providers = {
-  google: new GoogleAuthProvider(),
-  facebook: new FacebookAuthProvider(),
-  github: new GithubAuthProvider(),
-};
 
-export { auth, providers };
+// Auth providers
+const emailProvider = new EmailAuthProvider();
+const googleProvider = new GoogleAuthProvider();
+const facebookProvider = new FacebookAuthProvider();
+const githubProvider = new GithubAuthProvider();
+
+export { auth, emailProvider, googleProvider, facebookProvider, githubProvider };
