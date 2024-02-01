@@ -6,7 +6,7 @@ Mercury Notes strives to be an open-source and transparent note-taking app for p
 
 The purpose of Mercury Notes is to allow you to track and interact with the different types of information you're consuming, whether it be books, articles, podcasts, or audiobooks, and turn that information into actionable knowledge.
 
-## Features
+### Features
 
 Mercury Notes is a web application that offers several features to enhance your note-taking and knowledge development experience:
 
