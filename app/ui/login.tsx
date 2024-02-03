@@ -4,7 +4,7 @@
  * v0 by Vercel.
  * @see https://v0.dev/t/xtT4e1xIKDe
  */
-import { signInWithEmail, signInWithGoogle, signInWithFacebook, signInWithGithub } from '../lib/firebase-auth';
+import { signInWithEmail, signInWithGoogle, signInWithGithub } from '../lib/firebase-auth';
 import { Button } from "./button";
 import { useState } from 'react';
   
@@ -54,10 +54,6 @@ export default function Login() {
           <Button className="w-full p-2 mt-2 flex justify-center items-center" variant="outline" onClick={signInWithGoogle}>
             <img src="/google.svg" alt="Google" className="h-6 w-6 mr-2" />
             Log In with Google
-          </Button>
-          <Button className="w-full p-2 mt-2 flex justify-center items-center" variant="outline" onClick={signInWithFacebook}>
-            <img src="/facebook.svg" alt="Facebook" className="h-6 w-6 mr-2" />
-            Log In with Facebook
           </Button>
           <Button className="w-full p-2 mt-2 flex justify-center items-center" variant="outline" onClick={signInWithGithub}>
             <img src="/github.svg" alt="GitHub" className="h-6 w-6 mr-2" />

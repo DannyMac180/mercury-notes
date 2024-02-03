@@ -1,5 +1,5 @@
 import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
-import { auth, googleProvider, facebookProvider, githubProvider } from './firebase';
+import { auth, googleProvider, githubProvider } from './firebase';
 
 const signInWithEmail = async (email: string, password: string) => {
   try {
@@ -25,18 +25,6 @@ const signInWithGoogle = async () => {
   }
 };
 
-const signInWithFacebook = async () => {
-  try {
-    const userCredential = await signInWithPopup(auth, facebookProvider);
-    // User signed in
-    return userCredential.user;
-  } catch (error) {
-    // Handle Errors here.
-    console.error('Error signing in with Facebook', error);
-    throw error;
-  }
-};
-
 const signInWithGithub = async () => {
   try {
     const userCredential = await signInWithPopup(auth, githubProvider);
@@ -49,4 +37,4 @@ const signInWithGithub = async () => {
   }
 };
 
-export { signInWithEmail, signInWithGoogle, signInWithFacebook, signInWithGithub };
+export { signInWithEmail, signInWithGoogle, signInWithGithub };
