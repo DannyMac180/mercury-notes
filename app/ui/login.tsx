@@ -7,11 +7,13 @@
 import { signInWithEmail, signInWithGoogle, signInWithGithub } from '../lib/firebase-auth';
 import { Button } from "./button";
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
   
-export default function Login() {
+const Login = () => {
     // State to store the email and password value
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const router = useRouter();
   
     // Event handler to update the state with the input value
     const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -20,6 +22,34 @@ export default function Login() {
     const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
       setPassword(event.target.value);
     }
+
+    const signInWithEmail = async (email: string, password: string) => {
+      try {
+        await signInWithEmail(email, password);
+        router.push('/notes');
+      } catch (error) {
+        console.error('Error signing in with email and password', error);
+      }
+    }
+
+    const signInWithGoogle = async () => {
+      try {
+        await signInWithGoogle();
+        router.push('/notes');
+      } catch (error) {
+        console.error('Error signing in with Google', error);
+      }
+    }
+
+    const signInWithGithub = async () => {
+      try {
+        await signInWithGithub();
+        router.push('/notes');
+      } catch (error) {
+        console.error('Error signing in with GitHub', error);
+      }
+    }
+    
   return (
     <div className="flex flex-col items-center justify-center min-h-screen px-4 py-6 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-4">
@@ -64,3 +94,5 @@ export default function Login() {
     </div>
   )
 }
+
+export default Login;
