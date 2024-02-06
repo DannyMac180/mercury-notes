@@ -18,7 +18,7 @@ export default function Page() {
           <Link className="text-sm font-medium hover:underline" href="/login">
             Login
           </Link>
-          <Link className="text-sm font-medium hover:underline" href="#">
+          <Link className="text-sm font-medium hover:underline" href="/create-account">
             Create Account
           </Link>
         </nav>
