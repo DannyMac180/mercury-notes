@@ -77,7 +77,7 @@ const SignUp = () => {
           <Button
             className="w-full p-2 mt-2 flex justify-center items-center border-2 border-black"
             variant="default"
-            onClick={() => signUpWithEmail(email, password)}>
+            onClick={() => createUserWithEmail(email, password)}>
             <strong>Sign Up with Email</strong>
           </Button>
           <hr className="my-4 border-t border-gray-300" />
