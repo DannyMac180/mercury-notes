@@ -17,4 +17,8 @@ Mercury Notes is a web application that offers several features to enhance your 
 5. **Audio Notes**: Not just limited to text, save your notes in audio format for convenience and accessibility.
 6. **Podcast Transcription**: Enter a link to a podcast and use Whisper to transcribe it, allowing you to interact with the content through the transcript.
 
+### Design
+
+Check the 'Design' folder for design files if you're interested.
+
 **A work in progress
